@@ -80,6 +80,11 @@ npx playwright show-report
 ### Global BaseURL Management
 The `baseURL` is defined in `playwright.config.js`. To ensure correct URL concatenation, endpoints in the `PetStoreApi` class are defined as **relative paths**. This prevents common errors where the versioning of the API (`/v2`) is accidentally overwritten by absolute paths.
 
+Example of safe concatenation:
+* **BaseURL**: `https://petstore.swagger.io/v2`
+* **Endpoint**: `pet`
+* **Result**: `https://petstore.swagger.io/v2/pet`
+
 ### JavaScript Integer Precision (BigInt)
 The PetStore API returns 64-bit integers (int64) for IDs. Since JavaScript numbers lose precision above Number.MAX_SAFE_INTEGER, a debugging mechanism was implemented to export retrieved pets to data/selected_from_api.json for verification.
 
