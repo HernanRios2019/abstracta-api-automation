@@ -11,18 +11,18 @@ test.describe('PerfDog API Testing - Escenarios Completos', () => {
         api = new PetStoreApi(request);
     });
 
-    // HOOK DE LIMPIEZA: Se ejecuta una vez al finalizar todos los tests del archivo
-    // test.afterAll(async ({ request }) => {
-    //     const cleanApi = new PetStoreApi(request);
-    //     console.log('--- Iniciando limpieza de datos ---');
+    //HOOK DE LIMPIEZA: Se ejecuta una vez al finalizar todos los tests del archivo
+    test.afterAll(async ({ request }) => {
+        const cleanApi = new PetStoreApi(request);
+        console.log('--- Iniciando limpieza de datos ---');
 
-    //     for (const pet of testData.petsToCreate) {
-    //         const response = await cleanApi.deletePet(pet.id);
-    //         if (response.ok()) {
-    //             console.log(`Mascota eliminada: ${pet.name} (ID: ${pet.id})`);
-    //         }
-    //     }
-    // });
+        for (const pet of testData.petsToCreate) {
+            const response = await cleanApi.deletePet(pet.id);
+            if (response.ok()) {
+                console.log(`Mascota eliminada: ${pet.name} (ID: ${pet.id})`);
+            }
+        }
+    });
 
     test('Parte 1: Crear mascotas y validar códigos de respuesta', async () => {
         for (const pet of testData.petsToCreate) {

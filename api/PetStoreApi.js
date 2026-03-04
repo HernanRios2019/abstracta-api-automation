@@ -10,7 +10,6 @@ class PetStoreApi {
      */
     constructor(request) {
         this.request = request;
-        this.baseUrl = 'https://petstore.swagger.io/v2';
     }
 
     /**
@@ -18,7 +17,7 @@ class PetStoreApi {
      * @param {Object} petData - Objeto que debe seguir el esquema de Swagger (id, category, name, etc.)
      */
     async createPet(petData) {
-        return await this.request.post(`${this.baseUrl}/pet`, {
+        return await this.request.post('pet', {
             data: petData
         });
     }
@@ -28,7 +27,7 @@ class PetStoreApi {
      * @param {string} status - Estados válidos: available, pending, sold.
      */
     async getPetsByStatus(status) {
-        return await this.request.get(`${this.baseUrl}/pet/findByStatus`, {
+        return await this.request.get('pet/findByStatus', {
             params: { status: status }
         });
     }
@@ -38,7 +37,7 @@ class PetStoreApi {
      * @param {number} petId - ID de la mascota existente.
      */
     async placeOrder(petId, orderId) {
-        return await this.request.post(`${this.baseUrl}/store/order`, {
+        return await this.request.post('store/order', {
             data: {
                 id: orderId, // ID entero entre 1 y 10
                 petId: petId,
@@ -56,7 +55,7 @@ class PetStoreApi {
      * @param {number} petId 
      */
     async deletePet(petId) {
-        return await this.request.delete(`${this.baseUrl}/pet/${petId}`);
+        return await this.request.delete(`pet/${petId}`);
     }
 }
 
