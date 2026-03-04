@@ -1,0 +1,22 @@
+{
+  "name": "abstracta-api-automation",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/HernanRios2019/abstracta-api-automation#readme",
+  "bugs": {
+    "url": "https://github.com/HernanRios2019/abstracta-api-automation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HernanRios2019/abstracta-api-automation.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.3"
+  }
+}

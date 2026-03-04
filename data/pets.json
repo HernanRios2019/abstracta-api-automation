@@ -1,0 +1,156 @@
+{
+    "petsToCreate": [
+        {
+            "id": 1001,
+            "category": {
+                "id": 1,
+                "name": "Dogs"
+            },
+            "name": "Rex-Available-1",
+            "photoUrls": [
+                "https://example.com/rex1.jpg"
+            ],
+            "tags": [
+                {
+                    "id": 1,
+                    "name": "friendly"
+                }
+            ],
+            "status": "available"
+        },
+        {
+            "id": 1002,
+            "category": {
+                "id": 1,
+                "name": "Dogs"
+            },
+            "name": "Buddy-Available-2",
+            "photoUrls": [
+                "https://example.com/buddy.jpg"
+            ],
+            "tags": [
+                {
+                    "id": 1,
+                    "name": "active"
+                }
+            ],
+            "status": "available"
+        },
+        {
+            "id": 1003,
+            "category": {
+                "id": 2,
+                "name": "Cats"
+            },
+            "name": "Luna-Available-3",
+            "photoUrls": [
+                "https://example.com/luna.jpg"
+            ],
+            "tags": [
+                {
+                    "id": 2,
+                    "name": "indoor"
+                }
+            ],
+            "status": "available"
+        },
+        {
+            "id": 1004,
+            "category": {
+                "id": 1,
+                "name": "Dogs"
+            },
+            "name": "Max-Available-4",
+            "photoUrls": [
+                "https://example.com/max.jpg"
+            ],
+            "tags": [
+                {
+                    "id": 1,
+                    "name": "trained"
+                }
+            ],
+            "status": "available"
+        },
+        {
+            "id": 1005,
+            "category": {
+                "id": 3,
+                "name": "Birds"
+            },
+            "name": "Sky-Available-5",
+            "photoUrls": [
+                "https://example.com/sky.jpg"
+            ],
+            "tags": [
+                {
+                    "id": 3,
+                    "name": "vocal"
+                }
+            ],
+            "status": "available"
+        },
+        {
+            "id": 2001,
+            "category": {
+                "id": 1,
+                "name": "Dogs"
+            },
+            "name": "Cooper-Pending-1",
+            "photoUrls": [],
+            "tags": [],
+            "status": "pending"
+        },
+        {
+            "id": 2002,
+            "category": {
+                "id": 2,
+                "name": "Cats"
+            },
+            "name": "Milo-Pending-2",
+            "photoUrls": [],
+            "tags": [],
+            "status": "pending"
+        },
+        {
+            "id": 2003,
+            "category": {
+                "id": 1,
+                "name": "Dogs"
+            },
+            "name": "Rocky-Pending-3",
+            "photoUrls": [],
+            "tags": [],
+            "status": "pending"
+        },
+        {
+            "id": 2004,
+            "category": {
+                "id": 1,
+                "name": "Dogs"
+            },
+            "name": "Bella-Pending-4",
+            "photoUrls": [],
+            "tags": [],
+            "status": "pending"
+        },
+        {
+            "id": 3001,
+            "category": {
+                "id": 1,
+                "name": "Dogs"
+            },
+            "name": "Soldy-Sold-1",
+            "photoUrls": [
+                "https://example.com/soldy.jpg"
+            ],
+            "tags": [
+                {
+                    "id": 99,
+                    "name": "sold-out"
+                }
+            ],
+            "status": "sold"
+        }
+    ]
+}
