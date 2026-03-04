@@ -76,14 +76,17 @@ npx playwright show-report
 ---
 
 ## 📝 Design Decisions & Troubleshooting
-* JavaScript Integer Precision (BigInt)
 
-* During development, it was observed that the PetStore API often returns 64-bit integers (int64). Since JavaScript numbers lose precision above Number.MAX_SAFE_INTEGER, a debugging mechanism was implemented to export retrieved pets to data/selected_from_api.json. This allowed for manual verification and ensured that IDs were handled as strings in the reporting layer to maintain visual accuracy.
-* Strict Schema Adherence
+### Global BaseURL Management
+The `baseURL` is defined in `playwright.config.js`. To ensure correct URL concatenation, endpoints in the `PetStoreApi` class are defined as **relative paths**. This prevents common errors where the versioning of the API (`/v2`) is accidentally overwritten by absolute paths.
 
-* The PetStore API requires a strict payload structure. The framework was designed to always include mandatory arrays (photoUrls, tags) even if empty, ensuring compliance with the Swagger specification and preventing 500 errors from the server.
+### JavaScript Integer Precision (BigInt)
+The PetStore API returns 64-bit integers (int64) for IDs. Since JavaScript numbers lose precision above Number.MAX_SAFE_INTEGER, a debugging mechanism was implemented to export retrieved pets to data/selected_from_api.json for verification.
 
-* ---
+### Strict Schema Adherence
+The PetStore API requires a strict payload structure. The framework was designed to always include mandatory arrays (photoUrls, tags) even if empty, ensuring compliance with the Swagger specification and preventing 500 errors from the server.
+
+---
 
 * ## 👨‍💻 Author
 * Hernán Ríos - GitHub Profile
