@@ -81,7 +81,7 @@ npx playwright show-report
 The `baseURL` is defined in `playwright.config.js`. To ensure correct URL concatenation, endpoints in the `PetStoreApi` class are defined as **relative paths**. This prevents common errors where the versioning of the API (`/v2`) is accidentally overwritten by absolute paths.
 
 Example of safe concatenation:
-* **BaseURL**: `https://petstore.swagger.io/v2`
+* **BaseURL**: `https://petstore.swagger.io/v2/`
 * **Endpoint**: `pet`
 * **Result**: `https://petstore.swagger.io/v2/pet`
 

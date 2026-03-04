@@ -1,8 +1,8 @@
 // api/PetStoreApi.js
 
 /**
- * Clase controladora para interactuar con la API de PetStore.
- * Sigue la convención PascalCase para el nombre de la clase y el archivo.
+ * Controller class to interact with the PetStore API.
+ * Follows PascalCase convention for class name and file.
  */
 class PetStoreApi {
     /**
@@ -13,8 +13,8 @@ class PetStoreApi {
     }
 
     /**
-     * Crea una nueva mascota en la tienda.
-     * @param {Object} petData - Objeto que debe seguir el esquema de Swagger (id, category, name, etc.)
+     * Creates a new pet in the store.
+     * @param {Object} petData - Object that must follow the Swagger schema (id, category, name, etc.)
      */
     async createPet(petData) {
         return await this.request.post('pet', {
@@ -23,8 +23,8 @@ class PetStoreApi {
     }
 
     /**
-     * Busca mascotas por su estado.
-     * @param {string} status - Estados válidos: available, pending, sold.
+     * Finds pets by status.
+     * @param {string} status - Valid states: available, pending, sold.
      */
     async getPetsByStatus(status) {
         return await this.request.get('pet/findByStatus', {
@@ -33,8 +33,8 @@ class PetStoreApi {
     }
 
     /**
-     * Crea una orden de compra para una mascota específica.
-     * @param {number} petId - ID de la mascota existente.
+     * Creates a purchase order for a specific pet.
+     * @param {number} petId - ID of the existing pet.
      */
     async placeOrder(petId, orderId) {
         return await this.request.post('store/order', {
@@ -50,14 +50,18 @@ class PetStoreApi {
     }
 
     /**
-     * Elimina una mascota por su ID. 
-     * Útil para limpieza de datos (Cleanup).
+     * Deletes a pet by its ID. 
+     * Useful for data cleanup.
      * @param {number} petId 
      */
     async deletePet(petId) {
         return await this.request.delete(`pet/${petId}`);
     }
+
+    async deleteOrder(orderId) {
+        return await this.request.delete(`store/order/${orderId}`);
+    }
 }
 
-// Exportación nombrada en PascalCase para consistencia en los tests
+// Named export in PascalCase for consistency in tests
 module.exports = { PetStoreApi };
