@@ -1,4 +1,4 @@
-# Abstracta API Automation - PetStore Project
+# API Automation - PetStore Project
 
 This repository contains a robust automated testing suite for the **Swagger PetStore API**, built using **Playwright Test**. The project demonstrates advanced API testing techniques, including Data-Driven Testing (DDT), end-to-end data integrity validation, and dynamic resource management.
 
